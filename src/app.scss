@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+$colorWhite: #ffffff;
+$colorDarkGrey: #222222;
+$colorLightGrey: #e6e6e6;
+$generalWidth: 100%;
+
+@mixin navMeasures{
+    width: 100%;
+    height: 50px;
+}
+@mixin mainSections {
+    width: 100%;
+    height: 1000px;
+}
+
+@mixin displayFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin menuDimensions {
+    width: 110px;
+    height: 100%;
+}
+
+@mixin parteSopra {
+    width: 100%;
+    height: 300px;
+}
+
+@mixin parteSotto {
+    width: 100%;
+    height: 700px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.clearfix::after {
+    display: table;
+    content: '';
+    clear: both;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.container {
+    width: 85%;
+    height: 100%;
+    margin: 0 auto;
+    border: 1px solid red;  //Da cancellare
+}
+
+header {
+    .nav {
+        @include navMeasures;
+        background-color: black;
+        color: white;
+        .menu-up-whole {
+            float: right;
+        }
+        .menu-up {
+            @include displayFlex;
+            line-height: 50px;
+            margin-right: 20px;
+            float: left;
+            color: grey;
+            font-size: 12px;
+            i {
+                color: #009cff;
+                font-size: 15px;
+                margin-right: 8px;
+            }
+            select {
+                line-height: 50px;
+                margin-top: 12px;
+            }
+        }
+        .logo {
+            float: left;
+            width: 130px;
+            height: 100%;
+            h3 {
+                font-size: 30px;
+            }
+        }
+        .menu-v {
+            @include displayFlex;
+            @include menuDimensions;
+            float: left;
+            // border: 1px solid red; //Da cancellare
+            p {
+                font-size: 14px;
+                i {
+                    font-size: 10px;
+                    margin-left: 7px;
+                    color: grey;
+                }
+            }
+        }
+    }
+    .head {
+        width: $generalWidth;
+        height: 450px;
+        background-color: blue;
+    }
+}
+
+main {
+    .bar {
+        width: $generalWidth;
+        height: 70px;
+        background-color: $colorLightGrey;
+        border: 1px solid black;  //Da cancellare
+    }
+    .software-view, .carousel {
+        @include mainSections;
+        border: 1px solid black;  //Da cancellare
+    }
+    .software-view, .infos {
+        background-color: $colorDarkGrey;
+        .call-to-action {
+            @include parteSopra;
+            border: 1px solid white; //Da cancellare
+        }
+        .paint {
+            @include parteSotto;
+            border: 1px solid white;
+        }
+    }
+    .carousel {
+        background-color: $colorWhite;
+        .white-phrase {
+            @include parteSopra;
+            border: 1px solid black; //Da cancellare
+        }
+        .gallery {
+            @include parteSotto;
+            border: 1px solid black; //Da cancellare
+        }
+    }
+    .infos {
+        width: $generalWidth;
+        height: 2000px;
+    }
+}
+
+footer {
+    .about {
+        width: $generalWidth;
+        height: 300px;
+        background-color: $colorLightGrey;
+    }
+    .foot {
+        width: $generalWidth;
+        height: 90px;
+        background-color: $colorDarkGrey;
+    }
+}
