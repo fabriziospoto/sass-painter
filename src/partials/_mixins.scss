@@ -1,0 +1,51 @@
+@mixin navMeasures{
+    width: $generalWidth;
+    height: 50px;
+}
+@mixin mainSections {
+    width: $generalWidth;
+    height: 950px;
+}
+
+@mixin displayFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin menuDimensions {
+    width: 110px;
+    height: $generalHeight;
+}
+
+@mixin parteSopra {
+    width: $generalWidth;
+    height: 200px;
+}
+
+@mixin parteSotto {
+    width: $generalWidth;
+    height: 850px;
+}
+
+@mixin parallax {
+    width: $generalWidth;
+    height: 800px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@mixin write {
+    width: 80%;
+    margin: 0 auto;
+}
+
+@mixin buttons {
+    width: 150px;
+    height: 50px;
+    text-transform: uppercase;
+    color: white;
+    border: none;
+}
