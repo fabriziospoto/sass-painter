@@ -18,7 +18,6 @@ body {
   width: 85%;
   height: 100%;
   margin: 0 auto;
-  border: 1px solid red;
 }
 
 header .nav {
@@ -157,11 +156,44 @@ header .jumbotron .box .black-box button {
   background-color: #009cff;
 }
 
+header .jumbotron .box .black-box .offer {
+  width: calc(100% - 40px);
+  height: 80px;
+  color: #000000;
+  background-color: #ffffff;
+  margin: 30px 0 0 0;
+}
+
+header .jumbotron .box .black-box .offer h3 {
+  color: #000000;
+  font-size: 18px;
+  padding-bottom: 20px;
+}
+
+header .jumbotron .box .black-box .offer p {
+  font-size: 12px;
+}
+
 main .bar {
   width: 100%;
   height: 70px;
   background-color: #e6e6e6;
-  border: 1px solid black;
+  text-transform: uppercase;
+}
+
+main .bar .bar-box {
+  width: 130px;
+  height: 100%;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #222222;
+}
+
+main .bar .bar-box:hover {
+  background-color: #ffffff;
+  border-bottom: 3px solid #000000;
 }
 
 main .software-view,
@@ -278,6 +310,86 @@ main .infos {
   width: 100%;
   height: 2000px;
   background-color: #222222;
+  color: #ffffff;
+}
+
+main .infos .screenshot-quote {
+  width: 100%;
+  height: 250px;
+  text-align: center;
+}
+
+main .infos .screenshot-quote h2,
+main .infos .screenshot-quote p {
+  width: 80%;
+  margin: 0 auto;
+}
+
+main .infos .screenshot-quote h2 {
+  font-size: 45px;
+  padding-top: 60px;
+}
+
+main .infos .screenshot-quote p {
+  line-height: 30px;
+  padding-top: 40px;
+}
+
+main .infos .screenshot {
+  width: 100%;
+  height: 550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .infos .screenshot img {
+  width: 70%;
+}
+
+main .infos .infos-section {
+  width: 100%;
+  height: 600px;
+}
+
+main .infos .infos-section .primo,
+main .infos .infos-section .quarto {
+  width: 40%;
+  height: 100%;
+  float: left;
+}
+
+main .infos .infos-section .primo h2,
+main .infos .infos-section .primo p,
+main .infos .infos-section .quarto h2,
+main .infos .infos-section .quarto p {
+  width: 80%;
+  text-align: left;
+  line-height: 30px;
+}
+
+main .infos .infos-section .primo h2,
+main .infos .infos-section .quarto h2 {
+  margin-top: 150px;
+}
+
+main .infos .infos-section .primo p,
+main .infos .infos-section .quarto p {
+  margin-top: 30px;
+}
+
+main .infos .infos-section .secondo,
+main .infos .infos-section .terzo {
+  width: 60%;
+  height: 100%;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .infos .infos-section img {
+  width: 90%;
 }
 
 main .pic-two {
