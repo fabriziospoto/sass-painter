@@ -35,7 +35,6 @@ header {
             @include displayFlex;
             @include menuDimensions;
             float: left;
-            // border: 1px solid red; //Da cancellare
             p {
                 font-size: 14px;
                 i {
@@ -51,6 +50,7 @@ header {
         height: 450px;
         background-image: url('https://www.painterartist.com/static/ptr/product_content/painteressentials/7/hero-painteressentials-7.jpg');
         background-position: center;
+        background-repeat: no-repeat;
         .caratteristiche {
             width: 65%;
             height: $generalHeight;

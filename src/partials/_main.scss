@@ -4,6 +4,9 @@ main {
         height: 70px;
         background-color: $colorLightGrey;
         text-transform: uppercase;
+        position: sticky;
+        top: 0;
+        z-index: 3;
         .bar-box{
             width: 130px;
             height: $generalHeight;
@@ -18,7 +21,6 @@ main {
     }
     .software-view, .carousel {
         @include mainSections;
-        border: 1px solid black;  //Da cancellare
     }
     .software-view {
         background-image: url('https://www.painterartist.com/static/ptr/product_content/painteressentials/7/intro.jpg');
@@ -33,7 +35,7 @@ main {
                 @include write;
             }
             h1 {
-                margin-top: 70px;
+                padding-top: 70px;
                 font-size: $h1Size;
             }
             p {
@@ -70,7 +72,7 @@ main {
             h1 {
                 font-size: $h1Size;
                 @include write;
-                margin-top: 80px;
+                padding-top: 80px;
             }
             p {
                 font-size: 17px;
@@ -78,17 +80,67 @@ main {
                 line-height: 25px;
                 @include write;
             }
-            border: 1px solid black; //Da cancellare
         }
         .gallery {
             width: $generalWidth;
             height: 650px;
-            border: 1px solid black; //Da cancellare
             @include displayFlex;
-            .photos {
-                border: 1px solid black; //Da cancellare
-                width: 80%;
-                height: 610px;
+            .slideshow-container {
+                max-width: 1000px;
+                position: relative;
+                margin: auto;
+                .mySlides {
+                    display: none;
+                }
+                .prev, .next {
+                    background-color: orange;
+                    cursor: pointer;
+                    position: absolute;
+                    top: 50%;
+                    width: 25px;
+                    height: 25px;
+                    margin-top: -22px;
+                    padding: 16px;
+                    color: white;
+                    font-weight: bold;
+                    font-size: 18px;
+                    transition: 0.6s ease;
+                    border-radius: 50%;
+                    user-select: none;
+                    #left-c {
+                        position: absolute;
+                        top: 8px;
+                        left: 8px;
+                    }
+                    #right-c {
+                        position: absolute;
+                        top: 8px;
+                        right: 8px;
+                    }
+                }
+                .next {
+                    right: -50px;
+                }
+                .prev {
+                    left: -50px;
+                }
+                .prev:hover, .next:hover {
+                    background-color: lighten(orange, 30%);
+                }
+                .fade {
+                    -webkit-animation-name: fade;
+                    -webkit-animation-duration: 1.5s;
+                    animation-name: fade;
+                    animation-duration: 1.5s;
+                }
+                @-webkit-keyframes fade {
+                    from {opacity: .4}
+                    to {opacity: 1}
+                }
+                @keyframes fade {
+                    from {opacity: .4}
+                    to {opacity: 1}
+                }
             }
         }
     }
